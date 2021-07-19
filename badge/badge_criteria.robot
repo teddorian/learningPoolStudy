@@ -28,6 +28,7 @@ TC3 "Admin Make New User"
 TC4 "Verify User Can Open Badge with Complete Badge criteria page in Profile-Achievements"
     User Login With non-admin Credentials
     User Click View Your Profile In Profile Menu
+    User click “Achievements“ in Profile page
 
 
 *** Keywords ***
@@ -66,10 +67,14 @@ User Click View Your Profile In Profile Menu
     Click Element   css:#NavBar_UserMenuContainer_ListItem_profile   #User click View Your Profile link
     Wait until Element is visible   //*[@id="app-root"]/div[2]/div/section[2]/div[1]/div/div/div/button[2]/span[1]
     Click Element   //*[@id="app-root"]/div[2]/div/section[2]/div[1]/div/div/div/button[2]/span[1]  #User click Achievements link
+User click “Achievements“ in Profile page
+    Click Element   //*[@id="app-root"]/div[2]/div/section[2]/div[1]/div/div/div/button[2]/span[1]  #User click Achivements link
+    Click Element   //*[@id="app-root"]/div[2]/div/section[2]/div[3]/button[1]/span[1]              #User click Badge2 with complete Badge1 criteria
+    Wait until Element is visible   css:.sc-pzYib cVYBFK                                            #Verify Badge2 sidebar opened 
 User Click Admin Link In Profile Menu 
     Click Element   css: [aria-label = "QA Super Admin User Menu"]   #open User's profile menu 
-    Click Element   css: #NavBar_UserMenuContainer_ListItem_admin    #User click Admin link
-    Switch Window   new                                              #swithch to the tab to continue test
+    Click Element    //*[@id="NavBar_UserMenuContainer_ListItem_admin"]  #User click Admin link
+    Switch Window   NEW                                              #swithch to the tab to continue test
 User Click Settings and Badge Link 
     Click Element   css: #settings-tab                               #User click Settings link
     Wait until Element is visible  xpath: //a[@href='https://qa.curatr3.com/admin/qa/award']   
@@ -104,7 +109,8 @@ User Select Criteria for the Second Badge
     Click Element  css:.type-select [value =completion]                   
     Click Element  //*[@id="sets-cont"]/div/div/div/div[2]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/select/option[3]   #User selrct Completion criteria with badge value
     Click Element  //*[@id="completion-model-select-undefined"]/option[4]   #User select Completion criteria with badge 1 value
-    Click Element  css:[style="display: inline-block;"]              #User click tick icon to save criteria
+    Click Element  css:[style="display: inline-block;"]                     #User click tick icon to save criteria
     Wait until Element is visible  //*[@id="page-title"]/div/div[2]/h2/span[1]/a 
+
 Teardown Steps After All Tests
     Close All Browsers
