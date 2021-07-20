@@ -7,5 +7,5 @@ ${USER_PASSWORD}       welcome1
 ${TIMEOUT}             15
 ${RETRY_ATTEMPTS}      3
 ${RETRY_AFTER}         2
-${id}                  68
+${USER_id}                  68
 ${USER}                bogdan@onix-systems.com

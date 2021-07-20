@@ -83,24 +83,24 @@ User Click Settings and Badge Link
     Click Element   //a[@href='https://qa.curatr3.com/admin/qa/award']    #User click Badge link in menu
 User Make New Badge
     Wait until Element is visible  xpath: //a[@id="award-add-button"]
-    Click Element   xpath: //a[@id="award-add-button"]                    #User click Add Badge buttom
+    Click Element   //a[@id="award-add-button"]                           #User click Add Badge buttom
     Wait until Element is visible  name:name                       
     Input Text      name:name   Badge1                                    #User type in the Name filed
     Click Element  css: [type = "submit"]                                 #User click Submit button
-    Wait until Element is visible  //*[@id="type-select-undefined"]       #wait element select criteria for the badge
+    Wait until Element is visible  //*[@id="type-select-undefined"]       #wait User Must element select criteria for the badge
 User Select Criteria
-    Click Element  //*[@id="type-select-undefined"]                       #User select criteria dropdown for the badge
+    Click Element  //*[@id="type-select-undefined"]                       #User select User Must criteria dropdown for the badge
     Click Element  css:.type-select [value =completion]                   #User select Completion criteria
     Click Element  css:[style="display: inline-block;"]                   #User click tick icon to save criteria
-    Wait until Element is visible  //*[@id="page-title"]/div/div[2]/h2/span[1]/a   
+    Wait until Element is visible  //a[@class='pull-right'] 
 User Make Badge Live   
-    Click Element  //*[@id="page-title"]/div/div[2]/h2/span[1]/a          #User click Setings icon to make badge live
-    Wait until Element is visible  //*[@id="award-form"]/div/div[3]/div[2]/div/div/label[2]/input
-    Click Element  //*[@id="award-form"]/div/div[3]/div[2]/div/div/label[2]/input   #User click live radio button
-    Click Element  //*[@id="award-form"]/div/div[4]/div/input             #User click Save button
+    Click Element  //a[@class='pull-right']                               #User click Setings icon to make badge live
+    Wait until Element is visible  //input[@value='1']
+    Click Element  //input[@value='1']                                    #User click live radio button
+    Click Element  //input[@value='Save']                                 #User click Save button
 User Make Second Badge
-    Click Element   xpath: //a[@href='https://qa.curatr3.com/admin/qa/award']  #User click Badge link in menu
-    Wait until Element is visible  xpath: //a[@id="award-add-button"]
+    Click Element   //a[@href='https://qa.curatr3.com/admin/qa/award']    #User click Badge link in menu
+    Wait until Element is visible  //a[@id="award-add-button"]
     Click Element   xpath: //a[@id="award-add-button"]                    #User click Add Badge buttom
     Wait until Element is visible  name:name                       
     Input Text      name:name   Badge2                                    #User type in the Name filed
@@ -109,13 +109,13 @@ User Make Second Badge
 User Select Criteria for the Second Badge
     Click Element  //*[@id="type-select-undefined"]                       #User select criteria dropdown for the badge
     Click Element  css:.type-select [value =completion]                   
-    Click Element  //*[@id="sets-cont"]/div/div/div/div[2]/div[2]/div/div/div[2]/div[1]/div/div[2]/div/select/option[3]   #User selrct Completion criteria with badge value
+    Click Element  //option[@value='Award']                               #User selrct Completion criteria with badge value
     Click Element  //*[@id="completion-model-select-undefined"]/option[4]   #User select Completion criteria with badge 1 value
     Click Element  css:[style="display: inline-block;"]                     #User click tick icon to save criteria
-    Wait until Element is visible  //*[@id="page-title"]/div/div[2]/h2/span[1]/a 
+    Wait until Element is visible  //a[@class='pull-right']                 #Assert criteria saved and Badge page oppened
 Remove User
     Connect To Database    pymysql    ${DB_NAME}    ${DB_USERNAME}    ${DB_PASSWORD}    ${DB_HOST}    ${DB_PORT}
-    Execute SQL string  DELETE FROM users WHERE id = ${id};
+    Execute SQL string  DELETE FROM users WHERE id = ${USER_id};
 Teardown Steps After All Tests
     Close All Browsers
     
