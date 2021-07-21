@@ -32,13 +32,12 @@ TC4 "Verify User Can Open Badge with Complete Badge criteria page in Profile-Ach
     User Login With non-admin Credentials
     User Click View Your Profile In Profile Menu
     User click “Achievements“ in Profile page
-    Remove User
-
 
 *** Keywords ***
 Precondition Steps Before Each Test
-    Open browser    ${BASE_URL}   headlesschrome
+    Open browser    ${BASE_URL}   chrome
 Teardown Steps After All Tests
     Close All Browsers
+    Remove User
     
     
