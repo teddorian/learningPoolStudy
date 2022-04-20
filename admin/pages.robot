@@ -122,7 +122,20 @@ User Click New Learning Expirience button and make LX
     Wait until Element is visible  //*[@id="name"]
     Input Text     //*[@id="name"]  testLX                                  
     Click Element  css:#visibility [value = 'public']                       
-    Click Element  //*[@type='submit']                                      
+    Click Element  //*[@type='submit']     
+User Add Object to LX
+    Click Element  //a[@id='object-create-button']
+    Click Element  //a[@title='Choose from Library']      
+    Wait until Element is visible  //span[contains(text(),'Rapids Content')]    
+    Click Element  //span[contains(text(),'Rapids Content')]
+    Wait until Element is visible  //span[contains(text(),'Choose')]
+    Click Element  //span[contains(text(),'Choose')]     
+Assert User can search for new LX
+    Click Element  //span[contains(text(),'Front End')] 
+    Switch Window   NEW  
+    Wait until Element is visible  //input[@id='searchButton']
+    Input Text  //input[@id='searchButton']  testLX
+    Wait until Element is visible  //span[contains(text(), 'testLX')]    
 
 #Playlists
 User Click New Playlists Link

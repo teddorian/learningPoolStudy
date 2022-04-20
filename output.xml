@@ -1,210 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.10 on darwin)" generated="20220420 12:03:48.690" rpa="false" schemaversion="2">
-<suite id="s1" name="Assign Multiplelx" source="/Users/admin/learningPoolStudy/admin/admin_playlists/assign_multiplelx.robot">
-<test id="s1-t1" name="TC1 Verify User Can Assign Multiple LX to Playlist">
+<robot generator="Robot 4.0.3 (Python 3.9.10 on darwin)" generated="20220420 14:55:57.968" rpa="false" schemaversion="2">
+<suite id="s1" name="Make New Lx" source="/Users/admin/learningPoolStudy/admin/admin_LX/make_new_lx.robot">
+<test id="s1-t1" name="TC1 &quot;Verify User Can Make New LX">
 <kw name="Precondition Steps Before Each Test" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${BASE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220420 12:03:48.949" level="INFO">Opening browser 'chrome' to base url 'https://qa.curatr3.com'.</msg>
-<status status="PASS" starttime="20220420 12:03:48.948" endtime="20220420 12:03:52.095"/>
+<msg timestamp="20220420 14:55:58.236" level="INFO">Opening browser 'chrome' to base url 'https://qa.curatr3.com'.</msg>
+<status status="PASS" starttime="20220420 14:55:58.236" endtime="20220420 14:56:01.214"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:48.947" endtime="20220420 12:03:52.096"/>
+<status status="PASS" starttime="20220420 14:55:58.235" endtime="20220420 14:56:01.215"/>
 </kw>
 <kw name="User Login With Admin Credentials" library="pages">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=username-input</arg>
 <arg>${ADMIN_USER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:52.097" level="INFO">Typing text 'qasuperadmin@noreply.com' into text field 'id=username-input'.</msg>
-<status status="PASS" starttime="20220420 12:03:52.097" endtime="20220420 12:03:52.246"/>
+<msg timestamp="20220420 14:56:01.216" level="INFO">Typing text 'qasuperadmin@noreply.com' into text field 'id=username-input'.</msg>
+<status status="PASS" starttime="20220420 14:56:01.216" endtime="20220420 14:56:01.359"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=password-input</arg>
 <arg>${USER_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:52.247" level="INFO">Typing text 'welcome1' into text field 'id=password-input'.</msg>
-<status status="PASS" starttime="20220420 12:03:52.246" endtime="20220420 12:03:52.315"/>
+<msg timestamp="20220420 14:56:01.360" level="INFO">Typing text 'welcome1' into text field 'id=password-input'.</msg>
+<status status="PASS" starttime="20220420 14:56:01.359" endtime="20220420 14:56:01.429"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:.control-group [value="Login"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:52.315" level="INFO">Clicking element 'css:.control-group [value="Login"]'.</msg>
-<status status="PASS" starttime="20220420 12:03:52.315" endtime="20220420 12:03:53.533"/>
+<msg timestamp="20220420 14:56:01.430" level="INFO">Clicking element 'css:.control-group [value="Login"]'.</msg>
+<status status="PASS" starttime="20220420 14:56:01.429" endtime="20220420 14:56:02.864"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//div[@id='NavBar_Search']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:53.533" endtime="20220420 12:03:53.780"/>
+<status status="PASS" starttime="20220420 14:56:02.864" endtime="20220420 14:56:03.111"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:52.096" endtime="20220420 12:03:53.780"/>
+<status status="PASS" starttime="20220420 14:56:01.215" endtime="20220420 14:56:03.111"/>
 </kw>
 <kw name="User Click Admin Link In Profile Menu" library="pages">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//button[@aria-label="QA Super Admin User Menu"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:53.782" level="INFO">Clicking element '//button[@aria-label="QA Super Admin User Menu"]'.</msg>
-<status status="PASS" starttime="20220420 12:03:53.782" endtime="20220420 12:03:53.881"/>
+<msg timestamp="20220420 14:56:03.113" level="INFO">Clicking element '//button[@aria-label="QA Super Admin User Menu"]'.</msg>
+<status status="PASS" starttime="20220420 14:56:03.112" endtime="20220420 14:56:03.247"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//span[text()='Admin']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:53.881" level="INFO">Clicking element '//span[text()='Admin']'.</msg>
-<status status="PASS" starttime="20220420 12:03:53.881" endtime="20220420 12:03:54.039"/>
+<msg timestamp="20220420 14:56:03.247" level="INFO">Clicking element '//span[text()='Admin']'.</msg>
+<status status="PASS" starttime="20220420 14:56:03.247" endtime="20220420 14:56:03.355"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20220420 12:03:54.039" endtime="20220420 12:03:54.049"/>
+<status status="PASS" starttime="20220420 14:56:03.355" endtime="20220420 14:56:03.367"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:53.781" endtime="20220420 12:03:54.049"/>
+<status status="PASS" starttime="20220420 14:56:03.111" endtime="20220420 14:56:03.367"/>
 </kw>
-<kw name="User Click Organisation Link" library="pages">
+<kw name="User Click Org link and LXP Link" library="pages">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//a[@href='https://qa.curatr3.com/admin/qa/dashboard']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:54.050" endtime="20220420 12:03:55.327"/>
+<status status="PASS" starttime="20220420 14:56:03.368" endtime="20220420 14:56:04.396"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//a[@href='https://qa.curatr3.com/admin/qa/dashboard']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:55.327" level="INFO">Clicking element '//a[@href='https://qa.curatr3.com/admin/qa/dashboard']'.</msg>
-<status status="PASS" starttime="20220420 12:03:55.327" endtime="20220420 12:03:55.833"/>
+<msg timestamp="20220420 14:56:04.396" level="INFO">Clicking element '//a[@href='https://qa.curatr3.com/admin/qa/dashboard']'.</msg>
+<status status="PASS" starttime="20220420 14:56:04.396" endtime="20220420 14:56:04.915"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:54.049" endtime="20220420 12:03:55.833"/>
-</kw>
-<kw name="User Click New Playlists Link" library="pages">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//*[@id="goals-tab"]</arg>
+<arg>css:#learning-activities-tab</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:55.834" endtime="20220420 12:03:55.860"/>
+<status status="PASS" starttime="20220420 14:56:04.916" endtime="20220420 14:56:04.934"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[@id="goals-tab"]</arg>
+<arg>css:#learning-activities-tab</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:55.861" level="INFO">Clicking element '//*[@id="goals-tab"]'.</msg>
-<status status="PASS" starttime="20220420 12:03:55.860" endtime="20220420 12:03:57.657"/>
+<msg timestamp="20220420 14:56:04.935" level="INFO">Clicking element 'css:#learning-activities-tab'.</msg>
+<status status="PASS" starttime="20220420 14:56:04.935" endtime="20220420 14:56:06.478"/>
+</kw>
+<status status="PASS" starttime="20220420 14:56:03.367" endtime="20220420 14:56:06.478"/>
+</kw>
+<kw name="User Click New Learning Expirience button and make LX" library="pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#course-create-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:06.480" level="INFO">Clicking element 'css:#course-create-button'.</msg>
+<status status="PASS" starttime="20220420 14:56:06.479" endtime="20220420 14:56:06.540"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[@href='javascript:showCreateCourseForm(false)']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 14:56:06.540" endtime="20220420 14:56:06.793"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[contains(text(),'New Playlist')]</arg>
+<arg>//a[@href='javascript:showCreateCourseForm(false)']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:57.658" level="INFO">Clicking element '//span[contains(text(),'New Playlist')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:57.657" endtime="20220420 12:03:57.766"/>
+<msg timestamp="20220420 14:56:06.793" level="INFO">Clicking element '//a[@href='javascript:showCreateCourseForm(false)']'.</msg>
+<status status="PASS" starttime="20220420 14:56:06.793" endtime="20220420 14:56:06.835"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:55.833" endtime="20220420 12:03:57.766"/>
-</kw>
-<kw name="User Makes Playlist" library="pages">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//input[@name='name']</arg>
+<arg>//*[@id="name"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:57.767" endtime="20220420 12:03:57.798"/>
+<status status="PASS" starttime="20220420 14:56:06.835" endtime="20220420 14:56:07.096"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@name='name']</arg>
-<arg>1testPlaylist</arg>
+<arg>//*[@id="name"]</arg>
+<arg>testLX</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:57.799" level="INFO">Typing text '1testPlaylist' into text field '//input[@name='name']'.</msg>
-<status status="PASS" starttime="20220420 12:03:57.799" endtime="20220420 12:03:58.072"/>
+<msg timestamp="20220420 14:56:07.098" level="INFO">Typing text 'testLX' into text field '//*[@id="name"]'.</msg>
+<status status="PASS" starttime="20220420 14:56:07.097" endtime="20220420 14:56:07.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#visibility [value = 'public']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:07.250" level="INFO">Clicking element 'css:#visibility [value = 'public']'.</msg>
+<status status="PASS" starttime="20220420 14:56:07.250" endtime="20220420 14:56:07.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:07.288" level="INFO">Clicking element '//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20220420 14:56:07.287" endtime="20220420 14:56:08.513"/>
+</kw>
+<status status="PASS" starttime="20220420 14:56:06.479" endtime="20220420 14:56:08.513"/>
+</kw>
+<kw name="User Add Object to LX" library="pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[@id='object-create-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:08.514" level="INFO">Clicking element '//a[@id='object-create-button']'.</msg>
+<status status="PASS" starttime="20220420 14:56:08.514" endtime="20220420 14:56:08.560"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[@title='Choose from Library']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:08.560" level="INFO">Clicking element '//a[@title='Choose from Library']'.</msg>
+<status status="PASS" starttime="20220420 14:56:08.560" endtime="20220420 14:56:08.603"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Rapids Content')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 14:56:08.603" endtime="20220420 14:56:09.966"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Rapids Content')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:09.966" level="INFO">Clicking element '//span[contains(text(),'Rapids Content')]'.</msg>
+<status status="PASS" starttime="20220420 14:56:09.966" endtime="20220420 14:56:10.148"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Choose')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 14:56:10.149" endtime="20220420 14:56:10.389"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Choose')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:10.389" level="INFO">Clicking element '//span[contains(text(),'Choose')]'.</msg>
+<status status="PASS" starttime="20220420 14:56:10.389" endtime="20220420 14:56:10.488"/>
+</kw>
+<status status="PASS" starttime="20220420 14:56:08.513" endtime="20220420 14:56:10.489"/>
+</kw>
+<kw name="Assert User can search for new LX" library="pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(),'Front End')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220420 14:56:10.490" level="INFO">Clicking element '//span[contains(text(),'Front End')]'.</msg>
+<status status="PASS" starttime="20220420 14:56:10.490" endtime="20220420 14:56:10.545"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220420 14:56:10.545" endtime="20220420 14:56:10.554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@id='searchButton']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 14:56:10.555" endtime="20220420 14:56:11.905"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//textarea[@name='description']</arg>
-<arg>1testDescription</arg>
+<arg>//input[@id='searchButton']</arg>
+<arg>testLX</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:58.073" level="INFO">Typing text '1testDescription' into text field '//textarea[@name='description']'.</msg>
-<status status="PASS" starttime="20220420 12:03:58.073" endtime="20220420 12:03:58.240"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>//input[@name='ordering']</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220420 12:03:58.241" endtime="20220420 12:03:58.512"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@name='ordering']</arg>
-<arg>1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:58.513" level="INFO">Typing text '1' into text field '//input[@name='ordering']'.</msg>
-<status status="PASS" starttime="20220420 12:03:58.512" endtime="20220420 12:03:58.580"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[@type='submit']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:58.580" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20220420 12:03:58.580" endtime="20220420 12:03:58.653"/>
-</kw>
-<status status="PASS" starttime="20220420 12:03:57.766" endtime="20220420 12:03:58.653"/>
-</kw>
-<kw name="User Assigns Multiple LX to Playlist" library="pages">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//td[contains(text(),'1testPlaylist')]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:58.654" endtime="20220420 12:03:59.100"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//td[contains(text(),'1testPlaylist')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:59.101" level="INFO">Clicking element '//td[contains(text(),'1testPlaylist')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:59.100" endtime="20220420 12:03:59.162"/>
-</kw>
-<status status="PASS" starttime="20220420 12:03:58.653" endtime="20220420 12:03:59.162"/>
-</kw>
-<kw name="User Click Assign Learning Experiences and Choose Multiple LXs to Assign" library="pages">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Assign Learning Experiences')]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:59.163" endtime="20220420 12:03:59.181"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Assign Learning Experiences')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:59.181" level="INFO">Clicking element '//span[contains(text(),'Assign Learning Experiences')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:59.181" endtime="20220420 12:03:59.242"/>
+<msg timestamp="20220420 14:56:11.905" level="INFO">Typing text 'testLX' into text field '//input[@id='searchButton']'.</msg>
+<status status="PASS" starttime="20220420 14:56:11.905" endtime="20220420 14:56:11.983"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Multi Level - Multi Object')]</arg>
+<arg>//span[contains(text(), 'testLX')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220420 12:03:59.243" endtime="20220420 12:03:59.684"/>
+<status status="PASS" starttime="20220420 14:56:11.983" endtime="20220420 14:56:13.279"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Multi Level - Multi Object')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:59.685" level="INFO">Clicking element '//span[contains(text(),'Multi Level - Multi Object')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:59.685" endtime="20220420 12:03:59.730"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Rapids')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:59.730" level="INFO">Clicking element '//span[contains(text(),'Rapids')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:59.730" endtime="20220420 12:03:59.780"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Submit')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220420 12:03:59.780" level="INFO">Clicking element '//span[contains(text(),'Submit')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:59.780" endtime="20220420 12:03:59.831"/>
-</kw>
-<status status="PASS" starttime="20220420 12:03:59.162" endtime="20220420 12:03:59.831"/>
-</kw>
-<kw name="Verify LXs were added to Playlist" library="pages">
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>//span[contains(text(),'Multi Level - Multi Object')]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20220420 12:03:59.844" level="INFO">Current page contains element '//span[contains(text(),'Multi Level - Multi Object')]'.</msg>
-<status status="PASS" starttime="20220420 12:03:59.832" endtime="20220420 12:03:59.844"/>
-</kw>
-<status status="PASS" starttime="20220420 12:03:59.831" endtime="20220420 12:03:59.845"/>
+<status status="PASS" starttime="20220420 14:56:10.489" endtime="20220420 14:56:13.280"/>
 </kw>
 <kw name="Teardown Steps After All Tests" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220420 12:03:59.846" endtime="20220420 12:03:59.971"/>
+<status status="PASS" starttime="20220420 14:56:13.280" endtime="20220420 14:56:13.408"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:59.845" endtime="20220420 12:03:59.971"/>
+<status status="PASS" starttime="20220420 14:56:13.280" endtime="20220420 14:56:13.408"/>
 </kw>
-<status status="PASS" starttime="20220420 12:03:48.946" endtime="20220420 12:03:59.972"/>
+<status status="PASS" starttime="20220420 14:55:58.234" endtime="20220420 14:56:13.408"/>
 </test>
-<doc>This Test Suite for the ticket https://learningpool.atlassian.net/browse/LXP-4552</doc>
-<status status="PASS" starttime="20220420 12:03:48.692" endtime="20220420 12:03:59.973"/>
+<status status="PASS" starttime="20220420 14:55:57.969" endtime="20220420 14:56:13.411"/>
 </suite>
 <statistics>
 <total>
@@ -213,7 +215,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Assign Multiplelx">Assign Multiplelx</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Make New Lx">Make New Lx</stat>
 </suite>
 </statistics>
 <errors>

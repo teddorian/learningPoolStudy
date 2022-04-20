@@ -11,6 +11,8 @@ TC1 "Verify User Can Make New LX
     User Click Admin Link In Profile Menu
     User Click Org link and LXP Link
     User Click New Learning Expirience button and make LX
+    User Add Object to LX
+    Assert User can search for new LX
 *** Keywords ***
 Precondition Steps Before Each Test
     Open browser    ${BASE_URL}   chrome
