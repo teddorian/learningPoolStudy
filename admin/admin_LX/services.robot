@@ -11,6 +11,7 @@ TC1 Verify User Can Enable new "My Profile" page
     User Click Admin Link In Profile Menu
     User Click Organisation Link
     User Click New User Profile in Services
+
 *** Keywords ***
 Precondition Steps Before Each Test
     Open browser    ${BASE_URL}   chrome
